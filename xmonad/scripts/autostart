@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# picom &
+polybar &
+compfy --config ~/.config/compfy/compfy.conf &
+feh --no-fehbg --bg-fill '/home/kupr/Picture/skala.jpg' &
+xrandr --output DP-0 --primary --mode 2560x1440 --rate 165 --output HDMI-0 --mode 1920x1080 --rate 144 &

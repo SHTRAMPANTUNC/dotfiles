@@ -1,0 +1,62 @@
+configuration {
+    font: "JetBrainsMono Nerd Font Medium 50";
+	kb-row-down: "Control+k";
+	kb-row-up: "Control+j";
+	kb-remove-to-eol: "";
+	kb-accept-entry: "Return";
+}
+
+
+* {
+
+  bg:                   #1f1f25;
+  bg-alt:               #363648;
+  bg-selected:          #363648;
+
+  fg:                   #cdd6f4;
+  fg-alt:               #7f849c;
+
+ 
+  border: 0;
+  margin:5;
+  padding: 5;
+  spacing: 5;
+}
+
+window {
+  width: 30%;
+  background-color: @bg;
+}
+
+element {
+  background-color: transparent;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @fg;
+  background-color: @bg-selected;
+}
+
+element-icon {
+  size: -10;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+    horizontal-align: 0.46;
+}
+
+
+listview {
+  background-color: @bg;
+  columns: 5;
+  lines: 1;
+}
+
+mainbox {
+  children: [listview];
+  background-color: @bg;
+}
+
