@@ -1,0 +1,10 @@
+{
+    "diagnostics.globals": [
+        "LazyVim",
+        "vim",
+        "M"
+    ],
+    "diagnostics.disable": [
+        "undefined-doc-name"
+    ]
+}
