@@ -20,19 +20,19 @@
     config = {
       allowUnfree = true;
     };
-    overlays = [
-      (import ../../overlays/prismlauncher.nix)
-    ];
   };
 
   home = {
     packages = with pkgs; [
+      # Desk
       zathura
       vesktop
       obsidian
       tdesktop
-      # tun2socks
-      # prismlauncher
+      #Dev
+      go
+      clang
+      lldb
     ];
   };
 }

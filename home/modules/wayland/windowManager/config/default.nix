@@ -61,8 +61,13 @@ in {
           ];
 
           env = [
-            "HYPRCURSOR_THEME,${pointer.name}"
-            "HYPRCURSOR_SIZE,${toString pointer.size}"
+            "HYPRCURSOR_THEME, ${pointer.name}"
+            "HYPRCURSOR_SIZE, ${toString pointer.size}"
+            "NIXOS_OZONE_WL, 1";
+            "XDG_SESSION_TYPE, wayland";
+            "XDG_CURRENT_DESKTOP, Hyprland";
+            "XDG_SESSION_DESKTOP = Hyprland";
+            "GDK_BACKEND, wayland";
           ];
 
           general = {
