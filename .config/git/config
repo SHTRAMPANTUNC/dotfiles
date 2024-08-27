@@ -1,0 +1,33 @@
+[alias]
+	aa = "add --all"
+	br = "branch"
+	cm = "commit -m"
+	co = "checkout"
+	fpush = "push --force-with-lease"
+	s = "status"
+	unadd = "reset"
+	uncommit = "reset --soft head^"
+
+[branch]
+	sort = "-committerdate"
+
+[filter "lfs"]
+	clean = "git-lfs clean -- %f"
+	process = "git-lfs filter-process"
+	required = true
+	smudge = "git-lfs smudge -- %f"
+
+[init]
+	defaultbranch = "main"
+
+[pull]
+	rebase = true
+
+[push]
+  default = "simple"
+
+[diff]
+  tool = nvimdiff
+
+[github]
+	user = "SHTRAMPANTUNC"

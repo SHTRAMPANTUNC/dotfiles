@@ -1,0 +1,37 @@
+[global]
+frame_color = "#E8E3E3"
+separator_color= frame
+
+[urgency_low]
+background = "#151515"
+foreground = "#E8E3E3"
+
+[urgency_normal]
+background = "#151515"
+foreground = "#E8E3E3"
+
+[urgency_critical]
+background = "#151515"
+foreground = "#E8E3E3"
+
+
+[global]
+  monitor = 1
+  width = 500
+  origin = top-right
+  gap_size = 8
+  offset = 12x12
+  notification_limit = 4
+  format = "<b>%s </b>\n%b"
+  padding = 14
+  horizontal_padding = 14
+  font = JetBrainsMono Nerd Font 10
+
+[urgency_low]
+    timeout = 5
+
+[urgency_normal]
+    timeout = 5
+
+[urgency_critical]
+    timeout = 0
