@@ -1,7 +1,16 @@
 return {
-  -- Has been disabled coz nix
-  -- { "mason.nvim", enabled = false },
-  -- { "mason-lspconfig.nvim", enabled = false },
+  {
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "clangd",
+        "gopls",
+        "json-lsp",
+        "lua-language-server",
+        "cmake-language-server",
+      })
+    end,
+  },
 
   {
     "conform.nvim",

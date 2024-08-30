@@ -1,5 +1,5 @@
 return {
-  "tokyonight.nvim",
-  lazy = false,
-  opts = { style = "night" },
+  "craftzdog/solarized-osaka.nvim",
+  lazy = true,
+  priority = 1000,
 }

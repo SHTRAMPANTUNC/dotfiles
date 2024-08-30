@@ -4,7 +4,6 @@ alias du dust
 alias l "eza --icons -F -H --group-directories-first --git"
 alias ll "eza --icons -F -H --group-directories-first --git -all"
 alias lt "eza --tree -L 3"
-alias cp "cp -r"
 alias vi nvim
 alias vim nvim
 
