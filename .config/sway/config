@@ -31,10 +31,10 @@ exec_always foot --server
 
 # Idle configuration:
 exec swayidle -w \
-timeout 300 'swaylock -f -C ~/.config/swaylock/config' \
+timeout 300 'swaylock -f -C ~/.config/sway/swaylock/config' \
 timeout 600 'swaymsg "output * dpms off"' \
 resume 'swaymsg "output * dpms on"' \
-before-sleep 'swaylock -f -C ~/.config/swaylock/config'
+before-sleep 'swaylock -f -C ~/.config/sway/swaylock/config'
 
 input type:keyboard {
   xkb_layout us,ru

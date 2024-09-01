@@ -1,0 +1,11 @@
+# C common
+compile_commands.json
+.cache
+*.gc??
+# locked files
+*~
+# ide folders
+.editorconfig
+.vscode
+.idea
+.vs

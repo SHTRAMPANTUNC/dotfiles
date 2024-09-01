@@ -1,33 +1,46 @@
+[core]
+	excludesfile = ~/.gitignore
+	editor = nvim
+	ignorecase = false
+
 [alias]
-	aa = "add --all"
-	br = "branch"
-	cm = "commit -m"
-	co = "checkout"
-	fpush = "push --force-with-lease"
-	s = "status"
-	unadd = "reset"
-	uncommit = "reset --soft head^"
+	aa = add --all
+	br = branch
+	cm = commit -m
+	co = checkout
+	st = status
+	fpush = push --force-with-lease
+	unadd = reset
+	uncommit = reset --soft head^
 
 [branch]
-	sort = "-committerdate"
+	sort = -committerdate
 
 [filter "lfs"]
-	clean = "git-lfs clean -- %f"
-	process = "git-lfs filter-process"
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
 	required = true
-	smudge = "git-lfs smudge -- %f"
+  smudge = git-lfs smudge -- %f
+
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
 
 [init]
-	defaultbranch = "main"
+	defaultbranch = main
 
 [pull]
 	rebase = true
 
 [push]
-  default = "simple"
+  default = simple
 
 [diff]
   tool = nvimdiff
 
 [github]
-	user = "SHTRAMPANTUNC"
+	user = SHTRAMPANTUNC
