@@ -1,0 +1,4 @@
+sys-kernel/installkernel dracut grub
+# required by sys-auth/polkit-125::gentoo[systemd]
+# required by polkit (argument)
+>=sys-apps/systemd-256.5 policykit

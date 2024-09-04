@@ -64,18 +64,6 @@ return {
           },
           filetypes = { "c", "cpp", "h", "cc", "hpp" },
         },
-        nil_ls = {
-          settings = {
-            ["nil"] = {
-              nix = {
-                flake = {
-                  autoArchive = true,
-                  autoEvalInputs = false,
-                },
-              },
-            },
-          },
-        },
       },
     },
   },

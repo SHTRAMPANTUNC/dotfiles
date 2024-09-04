@@ -1,0 +1,43 @@
+# required by dev-libs/nss-3.104::gentoo
+# required by net-misc/networkmanager-1.48.4::gentoo[nss]
+# required by @selected
+# required by @world (argument)
+>=dev-db/sqlite-3.46.1 abi_x86_32
+# required by dev-db/sqlite-3.46.1::gentoo[readline]
+# required by dev-libs/nss-3.104::gentoo
+# required by net-misc/networkmanager-1.48.4::gentoo[nss]
+# required by @selected
+# required by @world (argument)
+>=sys-libs/readline-8.2_p13 abi_x86_32
+# required by virtual/libudev-251-r2::gentoo
+# required by media-video/pipewire-1.2.3::gentoo
+# required by media-libs/libpulse-17.0::gentoo
+# required by gui-apps/waybar-0.10.4::gentoo[pulseaudio]
+# required by @selected
+# required by @world (argument)
+>=sys-apps/systemd-256.5 abi_x86_32
+# required by sys-apps/systemd-256.5::gentoo[gcrypt]
+# required by virtual/libudev-251-r2::gentoo
+# required by media-video/pipewire-1.2.3::gentoo
+# required by media-libs/libpulse-17.0::gentoo
+# required by gui-apps/waybar-0.10.4::gentoo[pulseaudio]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libgcrypt-1.11.0 abi_x86_32
+# required by sys-apps/systemd-256.5::gentoo[lz4]
+# required by virtual/libudev-251-r2::gentoo
+# required by media-video/pipewire-1.2.3::gentoo
+# required by media-libs/libpulse-17.0::gentoo
+# required by gui-apps/waybar-0.10.4::gentoo[pulseaudio]
+# required by @selected
+# required by @world (argument)
+>=app-arch/lz4-1.10.0-r1 abi_x86_32
+# required by dev-libs/libgcrypt-1.11.0::gentoo
+# required by sys-apps/systemd-256.5::gentoo[gcrypt]
+# required by virtual/libudev-251-r2::gentoo
+# required by media-video/pipewire-1.2.3::gentoo
+# required by media-libs/libpulse-17.0::gentoo
+# required by gui-apps/waybar-0.10.4::gentoo[pulseaudio]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libgpg-error-1.50 abi_x86_32

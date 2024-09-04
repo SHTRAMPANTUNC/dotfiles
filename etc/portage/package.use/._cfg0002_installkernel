@@ -1,0 +1,240 @@
+sys-kernel/installkernel dracut grub
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=media-libs/fontconfig-2.15.0 abi_x86_32
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=sys-libs/libudev-compat-186-r1 abi_x86_32
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=media-libs/libpulse-17.0 abi_x86_32
+# required by media-libs/libpulse-17.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=media-libs/libsndfile-1.2.2-r2 abi_x86_32
+# required by media-libs/libpulse-17.0::gentoo[asyncns]
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=net-libs/libasyncns-0.8-r4 abi_x86_32
+# required by media-libs/libpulse-17.0::gentoo[dbus]
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=sys-apps/dbus-1.15.8 abi_x86_32
+# required by media-libs/libpulse-17.0::gentoo[glib]
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=dev-libs/glib-2.78.6 abi_x86_32
+# required by x11-libs/libXfixes-6.0.1::gentoo
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libX11-1.8.10 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libxcb-1.17.0 abi_x86_32
+# required by x11-libs/libxcb-1.17.0::gentoo
+# required by x11-libs/xcb-util-keysyms-0.4.1::gentoo
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXau-1.0.11 abi_x86_32
+# required by x11-libs/libxcb-1.17.0::gentoo
+# required by x11-libs/xcb-util-keysyms-0.4.1::gentoo
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXdmcp-1.1.5 abi_x86_32
+# required by dev-libs/glib-2.78.6::gentoo
+# required by media-libs/libpulse-17.0::gentoo[glib]
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=dev-libs/libpcre2-10.44-r1 abi_x86_32
+# required by sys-apps/systemd-256.5::gentoo
+# required by virtual/libudev-251-r2::gentoo
+# required by sys-libs/libudev-compat-186-r1::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=sys-apps/util-linux-2.40.2 abi_x86_32
+# required by media-libs/libsndfile-1.2.2-r2::gentoo[-minimal]
+# required by media-libs/libpulse-17.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=media-libs/flac-1.4.3 abi_x86_32
+# required by media-libs/libvorbis-1.3.7-r1::gentoo
+# required by media-libs/libsndfile-1.2.2-r2::gentoo[-minimal]
+# required by media-libs/libpulse-17.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=media-libs/libogg-1.3.5-r1 abi_x86_32
+# required by media-libs/libsndfile-1.2.2-r2::gentoo[-minimal]
+# required by media-libs/libpulse-17.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=media-libs/libvorbis-1.3.7-r1 abi_x86_32
+# required by media-libs/libsndfile-1.2.2-r2::gentoo[-minimal]
+# required by media-libs/libpulse-17.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=media-libs/opus-1.5.2 abi_x86_32
+# required by media-libs/libsndfile-1.2.2-r2::gentoo[-minimal]
+# required by media-libs/libpulse-17.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=media-sound/lame-3.100-r3 abi_x86_32
+# required by media-libs/libsndfile-1.2.2-r2::gentoo[-minimal]
+# required by media-libs/libpulse-17.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=media-sound/mpg123-base-1.32.3 abi_x86_32
+# required by media-libs/fontconfig-2.15.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=dev-libs/expat-2.6.2 abi_x86_32
+# required by media-libs/fontconfig-2.15.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=media-libs/freetype-2.13.3 abi_x86_32
+# required by media-libs/freetype-2.13.3::gentoo[bzip2]
+# required by media-libs/fontconfig-2.15.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=app-arch/bzip2-1.0.8-r5 abi_x86_32
+# required by media-libs/freetype-2.13.3::gentoo[png]
+# required by media-libs/fontconfig-2.15.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=media-libs/libpng-1.6.43 abi_x86_32
+# required by dev-libs/glib-2.78.6::gentoo
+# required by media-libs/libpulse-17.0::gentoo[glib]
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=virtual/libintl-0-r2 abi_x86_32
+# required by sys-libs/libudev-compat-186-r1::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=virtual/libudev-251-r2 abi_x86_32
+# required by virtual/libudev-251-r2::gentoo
+# required by sys-apps/util-linux-2.40.2::gentoo
+# required by media-libs/fontconfig-2.15.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=sys-apps/systemd-256.5 abi_x86_32
+# required by sys-apps/systemd-256.5::gentoo
+# required by virtual/libudev-251-r2::gentoo
+# required by sys-apps/util-linux-2.40.2::gentoo
+# required by media-libs/fontconfig-2.15.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=sys-libs/libcap-2.70 abi_x86_32
+# required by sys-apps/systemd-256.5::gentoo[gcrypt]
+# required by virtual/libudev-251-r2::gentoo
+# required by sys-apps/util-linux-2.40.2::gentoo
+# required by media-libs/fontconfig-2.15.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=dev-libs/libgcrypt-1.11.0 abi_x86_32
+# required by sys-apps/systemd-256.5::gentoo[lz4]
+# required by virtual/libudev-251-r2::gentoo
+# required by sys-apps/util-linux-2.40.2::gentoo
+# required by media-libs/fontconfig-2.15.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=app-arch/lz4-1.10.0-r1 abi_x86_32
+# required by sys-apps/systemd-256.5::gentoo[pam]
+# required by virtual/libudev-251-r2::gentoo
+# required by sys-apps/util-linux-2.40.2::gentoo
+# required by media-libs/fontconfig-2.15.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=sys-libs/pam-1.6.1 abi_x86_32
+# required by dev-libs/libgcrypt-1.11.0::gentoo
+# required by sys-apps/systemd-256.5::gentoo[gcrypt]
+# required by virtual/libudev-251-r2::gentoo
+# required by sys-apps/util-linux-2.40.2::gentoo
+# required by media-libs/fontconfig-2.15.0::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=dev-libs/libgpg-error-1.50 abi_x86_32
+# required by dev-libs/glib-2.78.6::gentoo
+# required by media-libs/libpulse-17.0::gentoo[glib]
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[pulseaudio]
+# required by games-util/steam-launcher (argument)
+>=virtual/libiconv-0-r2 abi_x86_32
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=virtual/opengl-7.0-r2 abi_x86_32
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay[joystick,wayland]
+# required by games-util/steam-launcher (argument)
+>=x11-base/xwayland-24.1.2 libei
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=media-libs/mesa-24.2.1 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=media-libs/libglvnd-1.7.0 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo[wayland]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=dev-libs/wayland-1.23.1 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libdrm-2.4.123 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libxshmfence-1.3.2 abi_x86_32
+# required by x11-libs/libXrandr-1.5.4::gentoo
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXext-1.3.6 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXxf86vm-1.1.5 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXfixes-6.0.1 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/xcb-util-keysyms-0.4.1 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXrandr-1.5.4 abi_x86_32
+# required by x11-libs/libXrandr-1.5.4::gentoo
+# required by media-libs/mesa-24.2.1::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXrender-0.9.11 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo[video_cards_radeonsi,-video_cards_r600,llvm,-video_cards_radeon]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=virtual/libelf-3-r1 abi_x86_32
+# required by virtual/libelf-3-r1::gentoo
+# required by media-libs/mesa-24.2.1::gentoo[video_cards_radeonsi,-video_cards_r600,llvm,-video_cards_radeon]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.81::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=dev-libs/elfutils-0.191-r2 abi_x86_32

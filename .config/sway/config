@@ -16,7 +16,7 @@ set {
   $resize_factor 50px
 
   $gaps_size 12
-  
+ 
   $border_size 4
  
   $term footclient
@@ -28,6 +28,10 @@ set {
 # Exexcs
 #
 exec_always foot --server
+exec_always dunst
+
+exec /usr/libexec/xdg-desktop-portal-gtk -r
+exec /usr/libexec/xdg-desktop-portal-wlr -r
 
 # Idle configuration:
 exec swayidle -w \

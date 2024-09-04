@@ -1,0 +1,5 @@
+# required by dev-qt/qtwayland-5.15.14::gentoo
+# required by kde-frameworks/kguiaddons-5.116.0-r1::gentoo[wayland]
+# required by media-gfx/flameshot-12.1.0-r2::gentoo[wayland]
+# required by flameshot (argument)
+>=dev-qt/qtgui-5.15.14 egl
