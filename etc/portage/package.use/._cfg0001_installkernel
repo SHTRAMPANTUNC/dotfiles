@@ -1,7 +1,0 @@
-sys-kernel/installkernel dracut grub
-# required by media-libs/mesa-24.2.0::gentoo[-video_cards_r300,-video_cards_r600,video_cards_radeonsi,-video_cards_radeon]
-# required by gui-libs/wlroots-0.17.4::gentoo
-# required by gui-apps/waybar-0.10.4::gentoo
-# required by @selected
-# required by @world (argument)
->=x11-libs/libdrm-2.4.122 video_cards_radeon

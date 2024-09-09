@@ -1,4 +1,4 @@
-# Prompt
+# Set directory p10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -51,21 +51,15 @@ function zle-keymap-select {
 zle -N zle-keymap-select
 
 # History search
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+bindkey '^k' history-search-backward
+bindkey '^j' history-search-forward
 
 # History
 HISTSIZE=5000
-HISTFILE=~/.zsh_history
+HISTFILE=~/.cache/zsh_history
 SAVEHIST=$HISTSIZE
-HISTDUP=erase
 setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
+setopt SHARE_HISTORY
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -75,7 +69,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias sudo="run0 --background=00"
 alias df="duf -only local"
 alias du=dust
 alias vim=nvim
@@ -83,6 +76,7 @@ alias vi=nvim
 alias l="eza --icons -F -H --group-directories-first --git"
 alias ll="eza --icons -F -H --group-directories-first --git -all"
 alias lt="eza --tree -L 3"
+alias zi="yazi"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -96,7 +90,7 @@ function extract {
       *.bz2)       bunzip2 $1  ;;
       *.rar)       unrar x $1    ;;
       *.gz)        gunzip $1   ;;
-      *.tar)       tar xf $1   ;;
+      *.tar)       tar xvf $1   ;;
       *.tbz2)      tar xjf $1  ;;
       *.tgz)       tar xzf $1  ;;
       *.zip)       unzip $1   ;;
@@ -112,14 +106,3 @@ function extract {
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
-## Varible
-# Sway
-export SDL_VIDEODRIVER=wayland
-export _JAVA_AWT_WM_NONREPARENTING=1
-export QT_QPA_PLATFORM=wayland
-export XDG_CURRENT_DESKTOP=sway
-export XDG_SESSION_DESKTOP=sway
-
-# Editor
-export EDITOR=/bin/nvim

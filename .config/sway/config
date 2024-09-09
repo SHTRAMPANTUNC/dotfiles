@@ -27,11 +27,17 @@ set {
 #
 # Exexcs
 #
-exec_always foot --server
-exec_always dunst
+exec_always {
+  foot --server
+  dunst
 
-exec /usr/libexec/xdg-desktop-portal-gtk -r
-exec /usr/libexec/xdg-desktop-portal-wlr -r
+  /usr/libexec/xdg-desktop-portal-gtk -r
+  /usr/libexec/xdg-desktop-portal-wlr -r
+
+  wl-paste --type text --watch cliphist store
+  wl-paste --type image --watch cliphist store
+
+} 
 
 # Idle configuration:
 exec swayidle -w \
@@ -56,11 +62,11 @@ bindsym --to-code {
   # Application launcher
   $mod+d exec $menu
 
-  # Logout Menu
-  $mod+q exec $power
-
   # Screenshot
-  $mod+p exec flameshot gui
+  $mod+p exec grim -g "$(slurp)" - | wl-copy
+
+  # Clipboard
+  $mod+c exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 
   # Reload the configuration file
   $mod+Shift+c reload
@@ -102,7 +108,7 @@ bindsym --to-code {
   $mod+8 workspace number 8
   $mod+9 workspace number 9
   $mod+0 workspace number 10
-  
+ 
   # Move focused container to workspace
   $mod+Shift+1 move container to workspace number 1
   $mod+Shift+2 move container to workspace number 2
@@ -121,7 +127,7 @@ bindsym --to-code {
 
   # Float
   $mod+Shift+space floating toggle
-  
+
   #Splits
   $mod+v splitv
   $mod+b splith
@@ -141,6 +147,11 @@ workspace 5 output DP-1
 workspace 6 output DP-1
 
 floating_modifier $mod normal
+
+### Rules
+for_window [class="obsidian"] floating enable, move position center, resize set 1800 1000
+for_window [app_id="imv"] floating enable, move position center, resize set 1800 1000
+for_window [app_id="firefox"] inhibit_idle fullscreen
 
 ### Theming
 #
@@ -172,10 +183,24 @@ output * {
 }
 
 #
+# GTK:
+#
+set $cursor_theme "macOS"
+set $cursor_size "28"
+
+seat seat0 xcursor_theme $cursor_theme $cursor_size
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+  gsettings set $gnome-schema cursor-theme $cursor_theme
+  gsettings set $gnome-schema cursor-size $cursor_size
+  gsettings set $gnome-schema font-name "JetBrainsMonoNL Nerd Font 14"
+  gsettings set $gnome-schema color-scheme "prefer-dark"
+}
+
+#
 # Gaps:
 #
 gaps inner $gaps_size
-
 
 ### Other
 #
@@ -186,7 +211,7 @@ xwayland enable
 #
 # Monitors:
 #
-output DP-1 pos 0 0 mode 2560x1440@165Hz 
+output DP-1 pos 0 0 mode 2560x1440@165Hz
 output HDMI-A-1 pos 2560 0 mode 1920x1080@144Hz
 
 #
@@ -194,4 +219,4 @@ output HDMI-A-1 pos 2560 0 mode 1920x1080@144Hz
 #
 bar swaybar_command waybar
 
-include /etc/sway/config.d/* 
+include /etc/sway/config.d/*

@@ -41,3 +41,9 @@
 # required by @selected
 # required by @world (argument)
 >=dev-libs/libgpg-error-1.50 abi_x86_32
+# required by media-libs/mesa-24.2.1::gentoo[vaapi]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by net-im/telegram-desktop-bin-5.4.1::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/libva-2.22.0 abi_x86_32
