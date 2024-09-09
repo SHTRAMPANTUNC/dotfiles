@@ -30,7 +30,7 @@ map({ "n", "x" }, "H", "^")
 map({ "n", "x" }, "L", "g_")
 
 -- Select All
-map("n", "<C-a>", "gg<S-v>G")
+map("n", "<leader>a", "gg<S-v>G")
 
 -- Better indenting
 map("x", "<S-tab>", "<gv")
