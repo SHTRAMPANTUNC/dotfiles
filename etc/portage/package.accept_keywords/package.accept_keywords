@@ -1,1 +1,7 @@
-
+sys-kernel/gentoo-kernel ~amd64
+sys-kernel/gentoo-sources ~amd64
+sys-kernel/linux-headers ~amd64
+app-editors/neovim ~amd64
+sys-devel/gcc ~amd64
+sys-apps/systemd ~amd64
+app-misc/yazi ~amd64
