@@ -52,7 +52,7 @@ return {
             "--pch-storage=memory",
             "--header-insertion=never",
             "--completion-style=detailed",
-            "--function-arg-placeholders",
+            "--function-arg-placeholders=false",
           },
           init_options = {
             usePlaceholders = true,
@@ -60,7 +60,7 @@ return {
             completeUnimported = true,
             clangdFileStatus = true,
             semanticHighlighting = true,
-            fallbackFlags = { "-std=c++20", "-Wextra", "-Wall", "-Wpedantic" },
+            fallbackFlags = { "-Wextra", "-Wall", "-Wpedantic" },
           },
           filetypes = { "c", "cpp", "h", "cc", "hpp" },
         },
