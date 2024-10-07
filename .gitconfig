@@ -1,3 +1,4 @@
+
 [core]
 	excludesfile = ~/.gitignore
 	editor = nvim
@@ -43,4 +44,7 @@
   tool = nvimdiff
 
 [github]
-	user = SHTRAMPANTUNC
+  user = SHTRAMPANTUNC
+
+[user]
+	signingkey = /home/kupr/.ssh/signing.pub

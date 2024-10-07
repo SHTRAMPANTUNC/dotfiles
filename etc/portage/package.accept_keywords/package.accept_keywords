@@ -1,7 +1,12 @@
 sys-kernel/gentoo-kernel ~amd64
 sys-kernel/gentoo-sources ~amd64
+virtual/dist-kernel ~amd64
 sys-kernel/linux-headers ~amd64
-app-editors/neovim ~amd64
-sys-devel/gcc ~amd64
-sys-apps/systemd ~amd64
+gui-apps/tuigreet ~amd64
+app-shells/zoxide ~amd64
 app-misc/yazi ~amd64
+sys-devel/gcc ~amd64
+app-misc/cliphist ~amd64
+games-util/steam-launcher ~amd64
+sys-libs/libudev-compat ~amd64
+games-util/game-device-udev-rules ~amd64
