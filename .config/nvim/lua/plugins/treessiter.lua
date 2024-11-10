@@ -8,10 +8,10 @@ return {
         "cpp",
         "sql",
         "lua",
-        "nix",
         "json",
         "yaml",
         "cmake",
+        "python"
       },
     },
   },

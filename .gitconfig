@@ -1,25 +1,25 @@
 [core]
-  excludesfile = ~/.gitignore
-  editor = nvim
-  ignorecase = false
+	excludesfile = ~/.gitignore
+	editor = nvim
+	ignorecase = false
 
 [alias]
-  aa = add --all
-  br = branch
-  cm = commit -m
-  co = checkout
+	aa = add --all
+	br = branch
+	cm = commit -m
+	co = checkout
   st = status
-  fpush = push --force-with-lease
-  unadd = reset
-  uncommit = reset --soft head^
+	fpush = push --force-with-lease
+	unadd = reset
+	uncommit = reset --soft head^
 
 [branch]
-  sort = -committerdate
+	sort = -committerdate
 
 [filter "lfs"]
-  clean = git-lfs clean -- %f
-  process = git-lfs filter-process
-  required = true
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
   smudge = git-lfs smudge -- %f
 
 [color]
@@ -31,10 +31,10 @@
   ui = auto
 
 [init]
-  defaultbranch = main
+	defaultbranch = main
 
 [pull]
-  rebase = true
+	rebase = true
 
 [push]
   default = simple
@@ -42,10 +42,5 @@
 [diff]
   tool = nvimdiff
 
-[user]
-  signingkey = /home/kupr/.ssh/signed
-  email = youngtuctim@gmail.com
-  name = SHTRAMPANTUNC
-
 [gpg]
-  format = ssh
+	format = ssh

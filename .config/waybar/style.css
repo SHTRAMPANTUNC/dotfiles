@@ -26,7 +26,6 @@ tooltip {
   background: @background;
   color: @white;
   border: 1px solid @border;
-  border-radius: 5px;
 }
 
 tooltip label {
@@ -57,16 +56,20 @@ window#waybar {
   color: @white;
   background: @background-alt;
   border: 1px solid @border;
-  border-radius: 5px;
   margin: 0.7rem 0.35rem;
-  padding: 0.4rem 0.8rem 0.4rem 0.8rem ; 
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem ;
+}
+
+#window{
+  color: @white;
+  margin: 0.7rem 0.35rem;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem ;
 }
  
 #workspaces button {
   background: @background;
   color: @white;
   border: 1px solid @border;
-  border-radius: 3px;
   padding: 0.4rem 0.8rem 0.4rem 0.8rem;
   margin-right: 0.8rem;
   margin: 0.7rem 0.35rem;
@@ -115,7 +118,6 @@ window#waybar {
 menu {
   background: @background;
   border: 1px solid @border;
-  border-radius: 8px;
 }
 
 menu separator {
@@ -134,15 +136,12 @@ menu menuitem:hover {
 }
 
 menu menuitem:first-child {
-  border-radius: 8px 8px 0 0;
 }
 
 menu menuitem:last-child {
-  border-radius: 0 0 8px 8px;
 }
 
 menu menuitem:only-child {
-  border-radius: 8px;
 }
 
 /* Notification */

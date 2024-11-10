@@ -29,7 +29,7 @@ set {
 #
 exec_always {
   foot --server
-  dunst
+  swaync
 
   /usr/libexec/xdg-desktop-portal-gtk -r
   /usr/libexec/xdg-desktop-portal-wlr -r
@@ -37,7 +37,8 @@ exec_always {
   wl-paste --type text --watch cliphist store
   wl-paste --type image --watch cliphist store
 
-} 
+  autotiling --limit 2 -w 1 4 5 6
+}
 
 # Idle configuration:
 exec swayidle -w \
@@ -71,6 +72,9 @@ bindsym --to-code {
   # Reload the configuration file
   $mod+Shift+c reload
 
+  # Don't disturb
+  $mod+n exec swaync-client -t
+
   # Multimedia:
   $mod+equal exec pamixer --increase 5
   $mod+minus exec pamixer --decrease  5
@@ -90,11 +94,7 @@ bindsym --to-code {
   $mod+Shift+$up move up
   $mod+Shift+$right move right
 
-  # Resize
-  $mod+Ctrl+$left resize shrink width $resize_factor
-  $mod+Ctrl+$down resize grow height $resize_factor 
-  $mod+Ctrl+$up resize shrink height $resize_factor
-  $mod+Ctrl+$right resize grow width $resize_factor 
+
 
   ## Workspaces:
   # Switch to workspace
@@ -128,15 +128,23 @@ bindsym --to-code {
   # Float
   $mod+Shift+space floating toggle
 
-  #Splits
-  $mod+v splitv
-  $mod+b splith
-  $mod+s layout toggle split
-
   # Tabble
   $mod+t layout tabbed
 
+  ## Mode
+  $mod+r mode "resize"
+
 }
+
+## Resize
+mode "resize" bindsym --to-code {
+  $mod+$left resize shrink width 15px
+  $mod+$down resize grow height 15px
+  $mod+$up resize shrink height 15px
+  $mod+$right resize grow width 15px
+  Escape mode "default"
+}
+
 
 # Workspace definitions
 workspace 1 output DP-1
@@ -152,6 +160,10 @@ floating_modifier $mod normal
 for_window [class="obsidian"] floating enable, move position center, resize set 1800 1000
 for_window [app_id="imv"] floating enable, move position center, resize set 1800 1000
 for_window [app_id="firefox"] inhibit_idle fullscreen
+for_window [title="^Picture-in-Picture$"] floating enable, move position center, sticky enable, border none
+for_window [title="Friends List"] floating enable
+for_window [title="Steam Settings"] floating enable
+for_window [title="About Mozilla Firefox"] floating enable
 
 ### Theming
 #
@@ -162,6 +174,7 @@ set {
   $red #B66467
   $darkgray #151515
 }
+
 # Window Border color:		border:		backgr:		text:		indicator:	childborder:
 client.focused                 $accent         $accent          $darkgray       $accent         $accent
 client.focused_inactive        $darkgray       $darkgray        $accent         $darkgray       $darkgray
@@ -183,19 +196,12 @@ output * {
 }
 
 #
-# GTK:
+# Cursor:
 #
 set $cursor_theme "macOS"
-set $cursor_size "28"
+set $cursor_size "32"
 
 seat seat0 xcursor_theme $cursor_theme $cursor_size
-set $gnome-schema org.gnome.desktop.interface
-exec_always {
-  gsettings set $gnome-schema cursor-theme $cursor_theme
-  gsettings set $gnome-schema cursor-size $cursor_size
-  gsettings set $gnome-schema font-name "JetBrainsMonoNL Nerd Font 14"
-  gsettings set $gnome-schema color-scheme "prefer-dark"
-}
 
 #
 # Gaps:

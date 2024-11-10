@@ -1,7 +1,7 @@
 COMMON_FLAGS="-O2 -march=native"
 CFLAGS="${COMMON_FLAGS}"
 CXXFLAGS="${COMMON_FLAGS}"
-LDFLAGS="-Wl --as-needed"
+LDFLAGS="-W --as-needed"
 
 CC="gcc"
 CXX="g++"

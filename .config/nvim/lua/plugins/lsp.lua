@@ -8,6 +8,7 @@ return {
         "json-lsp",
         "lua-language-server",
         "cmake-language-server",
+        "clang-format",
       })
     end,
   },
@@ -16,56 +17,58 @@ return {
     "conform.nvim",
     opts = {
       formatters_by_ft = {
-        go = { "goimports", "gofumpt" },
+        go = { "goimports" },
         cpp = { "clang_format" },
         c = { "clang_format" },
       },
     },
   },
 
+  { "mfussenegger/nvim-lint", enabled = false },
+
   --LSP settings
   {
     "neovim/nvim-lspconfig",
-    opts = {
-      intaly_hints = { enabled = true },
-      diagnostics = { virtual_text = { prefix = "icons" } },
-      ---@type lspconfig.options
-      servers = {
-        gopls = {
-          settings = {
-            hints = {
-              assignVariableTypes = true,
-              compositeLiteralFields = true,
-              compositeLiteralTypes = true,
-              constantValues = true,
-              functionTypeParameters = true,
-              parameterNames = true,
-              rangeVariableTypes = true,
+    opts = function(_, opts)
+      return vim.tbl_deep_extend("force", opts, {
+        diagnostics = { virtual_text = { prefix = "icons" } },
+        inlay_hints = { enabled = false },
+        servers = {
+          clangd = {
+            keys = {
+              { "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>" },
+            },
+            cmd = {
+              "clangd",
+              "--clang-tidy",
+              "--background-index",
+              "--pch-storage=memory",
+              "--header-insertion=never",
+              "--completion-style=detailed",
+            },
+            init_options = {
+              usePlaceholders = true,
+              completeUnimported = true,
+              clangdFileStatus = true,
+              fallbackFlags = { "-Wextra", "-Wall", "-Wpedantic" },
+            },
+          },
+          gopls = {
+            settings = {
+              hints = {
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
+              },
             },
           },
         },
-        clangd = {
-          cmd = {
-            "clangd",
-            "--clang-tidy",
-            "--background-index",
-            "--pch-storage=memory",
-            "--header-insertion=never",
-            "--completion-style=detailed",
-            "--function-arg-placeholders=false",
-          },
-          init_options = {
-            usePlaceholders = true,
-            restartAfterCrash = true,
-            completeUnimported = true,
-            clangdFileStatus = true,
-            semanticHighlighting = true,
-            fallbackFlags = { "-Wextra", "-Wall", "-Wpedantic" },
-          },
-          filetypes = { "c", "cpp", "h", "cc", "hpp" },
-        },
-      },
-    },
+      })
+    end,
   },
 
   {

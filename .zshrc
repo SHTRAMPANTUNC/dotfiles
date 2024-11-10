@@ -69,40 +69,52 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias df="duf -only local"
 alias du=dust
 alias vim=nvim
 alias vi=nvim
 alias l="eza --icons -F -H --group-directories-first --git"
 alias ll="eza --icons -F -H --group-directories-first --git -all"
 alias lt="eza --tree -L 3"
-alias zi="yazi"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias spot="spotify_player"
 
-function extract {
-  echo Extracting $1 ...
+ex ()
+{
   if [ -f $1 ] ; then
     case $1 in
-      *.tar.bz2)   tar xjf $1  ;;
-      *.tar.gz)    tar xzf $1  ;;
-      *.bz2)       bunzip2 $1  ;;
-      *.rar)       unrar x $1    ;;
-      *.gz)        gunzip $1   ;;
-      *.tar)       tar xvf $1   ;;
-      *.tbz2)      tar xjf $1  ;;
-      *.tgz)       tar xzf $1  ;;
-      *.zip)       unzip $1   ;;
-      *.Z)         uncompress $1  ;;
-      *.7z)        7z x $1  ;;
-      *)        echo "'$1' cannot be extracted via extract()" ;;
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
-      echo "'$1' is not a valid file"
+    echo "'$1' is not a valid file"
   fi
+}
+
+
+# Jumping between prompts::Foot
+precmd() {
+    print -Pn "\e]133;A\e\\"
 }
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh --cmd cd)"
+
+# bun completions
+[ -s "/home/kupr/.bun/_bun" ] && source "/home/kupr/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

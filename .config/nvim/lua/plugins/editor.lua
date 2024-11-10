@@ -1,11 +1,10 @@
 return {
   { "which-key.nvim", enabled = false },
+  { "grug-far.nvim", enabled = false },
 
   {
     "neo-tree.nvim",
     -- stylua: ignore
-    keys = {
-      { "<leader>n", function() require("neo-tree.command").execute({ toggle = true, dir = LazyVim.root() }) end, },},
     opts = {
       popup_border_style = "rounded",
       window = {

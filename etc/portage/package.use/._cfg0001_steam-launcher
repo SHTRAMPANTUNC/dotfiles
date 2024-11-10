@@ -58,4 +58,6 @@ sys-libs/libcap abi_x86_32
 sys-libs/pam abi_x86_32
 virtual/libiconv abi_x86_32
 x11-libs/xcb-util-keysyms abi_x86_32
-
+# required by gui-apps/swaync-0.10.1-r1::guru
+# required by swaync (argument)
+>=gui-libs/gtk-layer-shell-0.8.2 vala introspection

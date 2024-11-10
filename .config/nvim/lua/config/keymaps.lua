@@ -35,6 +35,3 @@ map("n", "<leader>a", "gg<S-v>G")
 -- Better indenting
 map("x", "<S-tab>", "<gv")
 map("x", "<tab>", ">gv|")
-
--- Toggle Spell
-map("n", "<leader>sp", ":set spell!<cr>", opts)
